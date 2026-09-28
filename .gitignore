@@ -1,0 +1,32 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Environment
+.env
+
+# VS Code
+.vscode/
+
+# ML
+*.pt
+*.pth
+*.onnx
+*.h5
+*.keras
+
+# Data
+data/
+datasets/
+*.csv
+
+# PostgreSQL
+postgres_data/
+
+# Experiment output
+results/
+logs/
+
+# OS
+.DS_Store
