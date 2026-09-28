@@ -1,0 +1,827 @@
+{
+  "run": 1,
+  "started_at": "2026-09-28T19:55:33.390412+00:00",
+  "duration_wall_clock_seconds": 60.0816217699994,
+  "configuration": {
+    "workload": "oltp_read_only",
+    "tables": 4,
+    "table_size": 100000,
+    "threads": 4,
+    "duration_seconds": 60,
+    "report_interval_seconds": 10
+  },
+  "metrics": {
+    "transactions_per_second": 1446.42,
+    "queries_per_second": 23142.76,
+    "total_queries": 1388720,
+    "total_transactions": 86795,
+    "ignored_errors": 0,
+    "reconnects": 0,
+    "total_time_seconds": 60.004,
+    "latency_min_ms": 1.55,
+    "latency_avg_ms": 2.76,
+    "latency_max_ms": 17.8,
+    "latency_p95_ms": 3.3
+  },
+  "process": {
+    "returncode": 0
+  },
+  "runtime": {
+    "before": {
+      "host": {
+        "timestamp": "2026-09-28T19:54:25.778136+00:00",
+        "cpu_percent": 4.2,
+        "cpu_count_logical": 8,
+        "cpu_count_physical": 4,
+        "memory_total_bytes": 16519192576,
+        "memory_available_bytes": 9992282112,
+        "memory_used_percent": 39.5,
+        "load_average": [
+          1.73779296875,
+          2.2958984375,
+          2.1533203125
+        ]
+      },
+      "postgres_container": {
+        "BlockIO": "0B / 1.39GB",
+        "CPUPerc": "0.01%",
+        "Container": "agentdb-postgres",
+        "ID": "9928c9543287",
+        "MemPerc": "0.91%",
+        "MemUsage": "143.9MiB / 15.38GiB",
+        "Name": "agentdb-postgres",
+        "NetIO": "244MB / 2.06GB",
+        "PIDs": "6"
+      },
+      "postgres": {
+        "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+        "settings": {
+          "effective_cache_size": {
+            "setting": "524288",
+            "unit": "8kB"
+          },
+          "maintenance_work_mem": {
+            "setting": "65536",
+            "unit": "kB"
+          },
+          "max_connections": {
+            "setting": "100",
+            "unit": null
+          },
+          "max_parallel_workers": {
+            "setting": "8",
+            "unit": null
+          },
+          "max_parallel_workers_per_gather": {
+            "setting": "2",
+            "unit": null
+          },
+          "max_worker_processes": {
+            "setting": "8",
+            "unit": null
+          },
+          "random_page_cost": {
+            "setting": "4",
+            "unit": null
+          },
+          "seq_page_cost": {
+            "setting": "1",
+            "unit": null
+          },
+          "shared_buffers": {
+            "setting": "16384",
+            "unit": "8kB"
+          },
+          "work_mem": {
+            "setting": "4096",
+            "unit": "kB"
+          }
+        }
+      }
+    },
+    "samples": [
+      {
+        "host": {
+          "timestamp": "2026-09-28T19:54:27.842953+00:00",
+          "cpu_percent": 59.2,
+          "cpu_count_logical": 8,
+          "cpu_count_physical": 4,
+          "memory_total_bytes": 16519192576,
+          "memory_available_bytes": 9996214272,
+          "memory_used_percent": 39.5,
+          "load_average": [
+            1.73779296875,
+            2.2958984375,
+            2.1533203125
+          ]
+        },
+        "postgres_container": {
+          "BlockIO": "0B / 1.39GB",
+          "CPUPerc": "264.87%",
+          "Container": "agentdb-postgres",
+          "ID": "9928c9543287",
+          "MemPerc": "0.98%",
+          "MemUsage": "153.8MiB / 15.38GiB",
+          "Name": "agentdb-postgres",
+          "NetIO": "251MB / 2.17GB",
+          "PIDs": "10"
+        },
+        "postgres": {
+          "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+          "settings": {
+            "effective_cache_size": {
+              "setting": "524288",
+              "unit": "8kB"
+            },
+            "maintenance_work_mem": {
+              "setting": "65536",
+              "unit": "kB"
+            },
+            "max_connections": {
+              "setting": "100",
+              "unit": null
+            },
+            "max_parallel_workers": {
+              "setting": "8",
+              "unit": null
+            },
+            "max_parallel_workers_per_gather": {
+              "setting": "2",
+              "unit": null
+            },
+            "max_worker_processes": {
+              "setting": "8",
+              "unit": null
+            },
+            "random_page_cost": {
+              "setting": "4",
+              "unit": null
+            },
+            "seq_page_cost": {
+              "setting": "1",
+              "unit": null
+            },
+            "shared_buffers": {
+              "setting": "16384",
+              "unit": "8kB"
+            },
+            "work_mem": {
+              "setting": "4096",
+              "unit": "kB"
+            }
+          }
+        }
+      },
+      {
+        "host": {
+          "timestamp": "2026-09-28T19:54:34.893397+00:00",
+          "cpu_percent": 60.2,
+          "cpu_count_logical": 8,
+          "cpu_count_physical": 4,
+          "memory_total_bytes": 16519192576,
+          "memory_available_bytes": 9990119424,
+          "memory_used_percent": 39.5,
+          "load_average": [
+            2.23974609375,
+            2.390625,
+            2.18505859375
+          ]
+        },
+        "postgres_container": {
+          "BlockIO": "0B / 1.39GB",
+          "CPUPerc": "264.36%",
+          "Container": "agentdb-postgres",
+          "ID": "9928c9543287",
+          "MemPerc": "0.98%",
+          "MemUsage": "154.1MiB / 15.38GiB",
+          "Name": "agentdb-postgres",
+          "NetIO": "278MB / 2.62GB",
+          "PIDs": "10"
+        },
+        "postgres": {
+          "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+          "settings": {
+            "effective_cache_size": {
+              "setting": "524288",
+              "unit": "8kB"
+            },
+            "maintenance_work_mem": {
+              "setting": "65536",
+              "unit": "kB"
+            },
+            "max_connections": {
+              "setting": "100",
+              "unit": null
+            },
+            "max_parallel_workers": {
+              "setting": "8",
+              "unit": null
+            },
+            "max_parallel_workers_per_gather": {
+              "setting": "2",
+              "unit": null
+            },
+            "max_worker_processes": {
+              "setting": "8",
+              "unit": null
+            },
+            "random_page_cost": {
+              "setting": "4",
+              "unit": null
+            },
+            "seq_page_cost": {
+              "setting": "1",
+              "unit": null
+            },
+            "shared_buffers": {
+              "setting": "16384",
+              "unit": "8kB"
+            },
+            "work_mem": {
+              "setting": "4096",
+              "unit": "kB"
+            }
+          }
+        }
+      },
+      {
+        "host": {
+          "timestamp": "2026-09-28T19:54:41.950843+00:00",
+          "cpu_percent": 59.7,
+          "cpu_count_logical": 8,
+          "cpu_count_physical": 4,
+          "memory_total_bytes": 16519192576,
+          "memory_available_bytes": 10002497536,
+          "memory_used_percent": 39.4,
+          "load_average": [
+            2.9658203125,
+            2.54248046875,
+            2.23681640625
+          ]
+        },
+        "postgres_container": {
+          "BlockIO": "0B / 1.39GB",
+          "CPUPerc": "261.83%",
+          "Container": "agentdb-postgres",
+          "ID": "9928c9543287",
+          "MemPerc": "0.98%",
+          "MemUsage": "154.1MiB / 15.38GiB",
+          "Name": "agentdb-postgres",
+          "NetIO": "305MB / 3.05GB",
+          "PIDs": "10"
+        },
+        "postgres": {
+          "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+          "settings": {
+            "effective_cache_size": {
+              "setting": "524288",
+              "unit": "8kB"
+            },
+            "maintenance_work_mem": {
+              "setting": "65536",
+              "unit": "kB"
+            },
+            "max_connections": {
+              "setting": "100",
+              "unit": null
+            },
+            "max_parallel_workers": {
+              "setting": "8",
+              "unit": null
+            },
+            "max_parallel_workers_per_gather": {
+              "setting": "2",
+              "unit": null
+            },
+            "max_worker_processes": {
+              "setting": "8",
+              "unit": null
+            },
+            "random_page_cost": {
+              "setting": "4",
+              "unit": null
+            },
+            "seq_page_cost": {
+              "setting": "1",
+              "unit": null
+            },
+            "shared_buffers": {
+              "setting": "16384",
+              "unit": "8kB"
+            },
+            "work_mem": {
+              "setting": "4096",
+              "unit": "kB"
+            }
+          }
+        }
+      },
+      {
+        "host": {
+          "timestamp": "2026-09-28T19:54:49.005138+00:00",
+          "cpu_percent": 60.0,
+          "cpu_count_logical": 8,
+          "cpu_count_physical": 4,
+          "memory_total_bytes": 16519192576,
+          "memory_available_bytes": 10038566912,
+          "memory_used_percent": 39.2,
+          "load_average": [
+            3.2890625,
+            2.61669921875,
+            2.2626953125
+          ]
+        },
+        "postgres_container": {
+          "BlockIO": "0B / 1.39GB",
+          "CPUPerc": "264.05%",
+          "Container": "agentdb-postgres",
+          "ID": "9928c9543287",
+          "MemPerc": "0.98%",
+          "MemUsage": "153.6MiB / 15.38GiB",
+          "Name": "agentdb-postgres",
+          "NetIO": "331MB / 3.48GB",
+          "PIDs": "10"
+        },
+        "postgres": {
+          "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+          "settings": {
+            "effective_cache_size": {
+              "setting": "524288",
+              "unit": "8kB"
+            },
+            "maintenance_work_mem": {
+              "setting": "65536",
+              "unit": "kB"
+            },
+            "max_connections": {
+              "setting": "100",
+              "unit": null
+            },
+            "max_parallel_workers": {
+              "setting": "8",
+              "unit": null
+            },
+            "max_parallel_workers_per_gather": {
+              "setting": "2",
+              "unit": null
+            },
+            "max_worker_processes": {
+              "setting": "8",
+              "unit": null
+            },
+            "random_page_cost": {
+              "setting": "4",
+              "unit": null
+            },
+            "seq_page_cost": {
+              "setting": "1",
+              "unit": null
+            },
+            "shared_buffers": {
+              "setting": "16384",
+              "unit": "8kB"
+            },
+            "work_mem": {
+              "setting": "4096",
+              "unit": "kB"
+            }
+          }
+        }
+      },
+      {
+        "host": {
+          "timestamp": "2026-09-28T19:54:56.056961+00:00",
+          "cpu_percent": 59.8,
+          "cpu_count_logical": 8,
+          "cpu_count_physical": 4,
+          "memory_total_bytes": 16519192576,
+          "memory_available_bytes": 10080194560,
+          "memory_used_percent": 39.0,
+          "load_average": [
+            3.7060546875,
+            2.72900390625,
+            2.30322265625
+          ]
+        },
+        "postgres_container": {
+          "BlockIO": "0B / 1.39GB",
+          "CPUPerc": "264.18%",
+          "Container": "agentdb-postgres",
+          "ID": "9928c9543287",
+          "MemPerc": "0.98%",
+          "MemUsage": "153.7MiB / 15.38GiB",
+          "Name": "agentdb-postgres",
+          "NetIO": "358MB / 3.92GB",
+          "PIDs": "10"
+        },
+        "postgres": {
+          "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+          "settings": {
+            "effective_cache_size": {
+              "setting": "524288",
+              "unit": "8kB"
+            },
+            "maintenance_work_mem": {
+              "setting": "65536",
+              "unit": "kB"
+            },
+            "max_connections": {
+              "setting": "100",
+              "unit": null
+            },
+            "max_parallel_workers": {
+              "setting": "8",
+              "unit": null
+            },
+            "max_parallel_workers_per_gather": {
+              "setting": "2",
+              "unit": null
+            },
+            "max_worker_processes": {
+              "setting": "8",
+              "unit": null
+            },
+            "random_page_cost": {
+              "setting": "4",
+              "unit": null
+            },
+            "seq_page_cost": {
+              "setting": "1",
+              "unit": null
+            },
+            "shared_buffers": {
+              "setting": "16384",
+              "unit": "8kB"
+            },
+            "work_mem": {
+              "setting": "4096",
+              "unit": "kB"
+            }
+          }
+        }
+      },
+      {
+        "host": {
+          "timestamp": "2026-09-28T19:55:03.112658+00:00",
+          "cpu_percent": 61.1,
+          "cpu_count_logical": 8,
+          "cpu_count_physical": 4,
+          "memory_total_bytes": 16519192576,
+          "memory_available_bytes": 10267676672,
+          "memory_used_percent": 37.8,
+          "load_average": [
+            3.81005859375,
+            2.76708984375,
+            2.31787109375
+          ]
+        },
+        "postgres_container": {
+          "BlockIO": "0B / 1.39GB",
+          "CPUPerc": "264.69%",
+          "Container": "agentdb-postgres",
+          "ID": "9928c9543287",
+          "MemPerc": "0.98%",
+          "MemUsage": "154MiB / 15.38GiB",
+          "Name": "agentdb-postgres",
+          "NetIO": "385MB / 4.37GB",
+          "PIDs": "10"
+        },
+        "postgres": {
+          "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+          "settings": {
+            "effective_cache_size": {
+              "setting": "524288",
+              "unit": "8kB"
+            },
+            "maintenance_work_mem": {
+              "setting": "65536",
+              "unit": "kB"
+            },
+            "max_connections": {
+              "setting": "100",
+              "unit": null
+            },
+            "max_parallel_workers": {
+              "setting": "8",
+              "unit": null
+            },
+            "max_parallel_workers_per_gather": {
+              "setting": "2",
+              "unit": null
+            },
+            "max_worker_processes": {
+              "setting": "8",
+              "unit": null
+            },
+            "random_page_cost": {
+              "setting": "4",
+              "unit": null
+            },
+            "seq_page_cost": {
+              "setting": "1",
+              "unit": null
+            },
+            "shared_buffers": {
+              "setting": "16384",
+              "unit": "8kB"
+            },
+            "work_mem": {
+              "setting": "4096",
+              "unit": "kB"
+            }
+          }
+        }
+      },
+      {
+        "host": {
+          "timestamp": "2026-09-28T19:55:10.162250+00:00",
+          "cpu_percent": 60.1,
+          "cpu_count_logical": 8,
+          "cpu_count_physical": 4,
+          "memory_total_bytes": 16519192576,
+          "memory_available_bytes": 10425856000,
+          "memory_used_percent": 36.9,
+          "load_average": [
+            3.90576171875,
+            2.80419921875,
+            2.33251953125
+          ]
+        },
+        "postgres_container": {
+          "BlockIO": "0B / 1.39GB",
+          "CPUPerc": "262.65%",
+          "Container": "agentdb-postgres",
+          "ID": "9928c9543287",
+          "MemPerc": "0.98%",
+          "MemUsage": "153.7MiB / 15.38GiB",
+          "Name": "agentdb-postgres",
+          "NetIO": "412MB / 4.8GB",
+          "PIDs": "10"
+        },
+        "postgres": {
+          "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+          "settings": {
+            "effective_cache_size": {
+              "setting": "524288",
+              "unit": "8kB"
+            },
+            "maintenance_work_mem": {
+              "setting": "65536",
+              "unit": "kB"
+            },
+            "max_connections": {
+              "setting": "100",
+              "unit": null
+            },
+            "max_parallel_workers": {
+              "setting": "8",
+              "unit": null
+            },
+            "max_parallel_workers_per_gather": {
+              "setting": "2",
+              "unit": null
+            },
+            "max_worker_processes": {
+              "setting": "8",
+              "unit": null
+            },
+            "random_page_cost": {
+              "setting": "4",
+              "unit": null
+            },
+            "seq_page_cost": {
+              "setting": "1",
+              "unit": null
+            },
+            "shared_buffers": {
+              "setting": "16384",
+              "unit": "8kB"
+            },
+            "work_mem": {
+              "setting": "4096",
+              "unit": "kB"
+            }
+          }
+        }
+      },
+      {
+        "host": {
+          "timestamp": "2026-09-28T19:55:17.217417+00:00",
+          "cpu_percent": 59.9,
+          "cpu_count_logical": 8,
+          "cpu_count_physical": 4,
+          "memory_total_bytes": 16519192576,
+          "memory_available_bytes": 10435739648,
+          "memory_used_percent": 36.8,
+          "load_average": [
+            4.3818359375,
+            2.94287109375,
+            2.38330078125
+          ]
+        },
+        "postgres_container": {
+          "BlockIO": "0B / 1.39GB",
+          "CPUPerc": "265.99%",
+          "Container": "agentdb-postgres",
+          "ID": "9928c9543287",
+          "MemPerc": "0.98%",
+          "MemUsage": "153.9MiB / 15.38GiB",
+          "Name": "agentdb-postgres",
+          "NetIO": "438MB / 5.23GB",
+          "PIDs": "10"
+        },
+        "postgres": {
+          "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+          "settings": {
+            "effective_cache_size": {
+              "setting": "524288",
+              "unit": "8kB"
+            },
+            "maintenance_work_mem": {
+              "setting": "65536",
+              "unit": "kB"
+            },
+            "max_connections": {
+              "setting": "100",
+              "unit": null
+            },
+            "max_parallel_workers": {
+              "setting": "8",
+              "unit": null
+            },
+            "max_parallel_workers_per_gather": {
+              "setting": "2",
+              "unit": null
+            },
+            "max_worker_processes": {
+              "setting": "8",
+              "unit": null
+            },
+            "random_page_cost": {
+              "setting": "4",
+              "unit": null
+            },
+            "seq_page_cost": {
+              "setting": "1",
+              "unit": null
+            },
+            "shared_buffers": {
+              "setting": "16384",
+              "unit": "8kB"
+            },
+            "work_mem": {
+              "setting": "4096",
+              "unit": "kB"
+            }
+          }
+        }
+      },
+      {
+        "host": {
+          "timestamp": "2026-09-28T19:55:24.271975+00:00",
+          "cpu_percent": 60.2,
+          "cpu_count_logical": 8,
+          "cpu_count_physical": 4,
+          "memory_total_bytes": 16519192576,
+          "memory_available_bytes": 10437070848,
+          "memory_used_percent": 36.8,
+          "load_average": [
+            4.51171875,
+            2.99365234375,
+            2.40283203125
+          ]
+        },
+        "postgres_container": {
+          "BlockIO": "0B / 1.39GB",
+          "CPUPerc": "262.85%",
+          "Container": "agentdb-postgres",
+          "ID": "9928c9543287",
+          "MemPerc": "0.98%",
+          "MemUsage": "154MiB / 15.38GiB",
+          "Name": "agentdb-postgres",
+          "NetIO": "464MB / 5.66GB",
+          "PIDs": "10"
+        },
+        "postgres": {
+          "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+          "settings": {
+            "effective_cache_size": {
+              "setting": "524288",
+              "unit": "8kB"
+            },
+            "maintenance_work_mem": {
+              "setting": "65536",
+              "unit": "kB"
+            },
+            "max_connections": {
+              "setting": "100",
+              "unit": null
+            },
+            "max_parallel_workers": {
+              "setting": "8",
+              "unit": null
+            },
+            "max_parallel_workers_per_gather": {
+              "setting": "2",
+              "unit": null
+            },
+            "max_worker_processes": {
+              "setting": "8",
+              "unit": null
+            },
+            "random_page_cost": {
+              "setting": "4",
+              "unit": null
+            },
+            "seq_page_cost": {
+              "setting": "1",
+              "unit": null
+            },
+            "shared_buffers": {
+              "setting": "16384",
+              "unit": "8kB"
+            },
+            "work_mem": {
+              "setting": "4096",
+              "unit": "kB"
+            }
+          }
+        }
+      }
+    ],
+    "after": {
+      "host": {
+        "timestamp": "2026-09-28T19:55:31.324130+00:00",
+        "cpu_percent": 3.8,
+        "cpu_count_logical": 8,
+        "cpu_count_physical": 4,
+        "memory_total_bytes": 16519192576,
+        "memory_available_bytes": 10427183104,
+        "memory_used_percent": 36.9,
+        "load_average": [
+          4.2666015625,
+          2.99365234375,
+          2.4091796875
+        ]
+      },
+      "postgres_container": {
+        "BlockIO": "0B / 1.39GB",
+        "CPUPerc": "0.02%",
+        "Container": "agentdb-postgres",
+        "ID": "9928c9543287",
+        "MemPerc": "0.91%",
+        "MemUsage": "144MiB / 15.38GiB",
+        "Name": "agentdb-postgres",
+        "NetIO": "471MB / 5.76GB",
+        "PIDs": "6"
+      },
+      "postgres": {
+        "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+        "settings": {
+          "effective_cache_size": {
+            "setting": "524288",
+            "unit": "8kB"
+          },
+          "maintenance_work_mem": {
+            "setting": "65536",
+            "unit": "kB"
+          },
+          "max_connections": {
+            "setting": "100",
+            "unit": null
+          },
+          "max_parallel_workers": {
+            "setting": "8",
+            "unit": null
+          },
+          "max_parallel_workers_per_gather": {
+            "setting": "2",
+            "unit": null
+          },
+          "max_worker_processes": {
+            "setting": "8",
+            "unit": null
+          },
+          "random_page_cost": {
+            "setting": "4",
+            "unit": null
+          },
+          "seq_page_cost": {
+            "setting": "1",
+            "unit": null
+          },
+          "shared_buffers": {
+            "setting": "16384",
+            "unit": "8kB"
+          },
+          "work_mem": {
+            "setting": "4096",
+            "unit": "kB"
+          }
+        }
+      }
+    }
+  },
+  "raw_sysbench_output": "sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)\n\nRunning the test with following options:\nNumber of threads: 4\nReport intermediate results every 10 second(s)\nInitializing random number generator from current time\n\n\nInitializing worker threads...\n\nThreads started!\n\n[ 10s ] thds: 4 tps: 1458.65 qps: 23341.83 (r/w/o: 20424.14/0.00/2917.69) lat (ms,95%): 3.43 err/s: 0.00 reconn/s: 0.00\n[ 20s ] thds: 4 tps: 1438.03 qps: 23008.17 (r/w/o: 20132.22/0.00/2875.96) lat (ms,95%): 3.25 err/s: 0.00 reconn/s: 0.00\n[ 30s ] thds: 4 tps: 1434.15 qps: 22946.77 (r/w/o: 20078.36/0.00/2868.41) lat (ms,95%): 3.25 err/s: 0.00 reconn/s: 0.00\n[ 40s ] thds: 4 tps: 1476.28 qps: 23622.08 (r/w/o: 20669.52/0.00/2952.56) lat (ms,95%): 3.25 err/s: 0.00 reconn/s: 0.00\n[ 50s ] thds: 4 tps: 1424.41 qps: 22790.35 (r/w/o: 19941.53/0.00/2848.82) lat (ms,95%): 3.30 err/s: 0.00 reconn/s: 0.00\n[ 60s ] thds: 4 tps: 1447.17 qps: 23153.66 (r/w/o: 20259.32/0.00/2894.35) lat (ms,95%): 3.30 err/s: 0.00 reconn/s: 0.00\nSQL statistics:\n    queries performed:\n        read:                            1215130\n        write:                           0\n        other:                           173590\n        total:                           1388720\n    transactions:                        86795  (1446.42 per sec.)\n    queries:                             1388720 (23142.76 per sec.)\n    ignored errors:                      0      (0.00 per sec.)\n    reconnects:                          0      (0.00 per sec.)\n\nGeneral statistics:\n    total time:                          60.0040s\n    total number of events:              86795\n\nLatency (ms):\n         min:                                    1.55\n         avg:                                    2.76\n         max:                                   17.80\n         95th percentile:                        3.30\n         sum:                               239843.59\n\nThreads fairness:\n    events (avg/stddev):           21698.7500/11.12\n    execution time (avg/stddev):   59.9609/0.00\n\n",
+  "sysbench_stderr": ""
+}

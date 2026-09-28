@@ -1,0 +1,54 @@
+{
+  "experiment": "S1",
+  "workload": "oltp_read_only",
+  "runs": 5,
+  "configuration": {
+    "tables": 4,
+    "table_size": 100000,
+    "threads": 4,
+    "duration_seconds": 60
+  },
+  "metrics": {
+    "tps": {
+      "mean": 1441.354,
+      "stddev": 5.1218727043924295,
+      "min": 1434.08,
+      "max": 1446.42
+    },
+    "qps": {
+      "mean": 23061.682,
+      "stddev": 81.96354659237196,
+      "min": 22945.29,
+      "max": 23142.76
+    },
+    "average_latency_ms": {
+      "mean": 2.774,
+      "stddev": 0.011401754250991429,
+      "min": 2.76,
+      "max": 2.79
+    },
+    "p95_latency_ms": {
+      "mean": 3.3,
+      "stddev": 0.0,
+      "min": 3.3,
+      "max": 3.3
+    },
+    "maximum_latency_ms": {
+      "mean": 17.732,
+      "stddev": 8.818558272189394,
+      "min": 6.7,
+      "max": 28.44
+    },
+    "errors": {
+      "total": 0,
+      "per_run": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "generated_at": "2026-09-28T20:00:03.770454+00:00"
+}

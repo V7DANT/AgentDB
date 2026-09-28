@@ -25,7 +25,6 @@ datasets/
 postgres_data/
 
 # Experiment output
-results/
 logs/
 
 # OS
