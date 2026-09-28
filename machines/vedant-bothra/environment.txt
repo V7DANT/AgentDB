@@ -1,0 +1,143 @@
+============================================================
+AgentDB Machine Environment Fingerprint
+============================================================
+
+Generated:
+2026-09-29T00:51:04+05:30
+
+Machine ID:
+vedant-bothra
+
+------------------------------------------------------------
+HARDWARE
+------------------------------------------------------------
+
+[CPU]
+Architecture:                            x86_64
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Model name:                              11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      4
+Socket(s):                               1
+CPU(s) scaling MHz:                      18%
+CPU max MHz:                             4700.0000
+CPU min MHz:                             400.0000
+NUMA node0 CPU(s):                       0-7
+
+[RAM]
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       5.6Gi       2.8Gi       1.0Gi       8.5Gi       9.8Gi
+Swap:          4.0Gi          0B       4.0Gi
+
+[Storage]
+NAME        MODEL                     SIZE TYPE FSTYPE   MOUNTPOINTS
+loop0                                   4K loop squashfs /snap/bare/5
+loop1                               184.8M loop squashfs /snap/chromium/3235
+loop2                               182.8M loop squashfs /snap/chromium/3161
+loop3                               329.4M loop squashfs /snap/code/205
+loop4                               453.2M loop squashfs /snap/code/252
+loop5                                63.8M loop squashfs /snap/core20/2669
+loop6                                63.8M loop squashfs /snap/core20/2686
+loop7                                73.9M loop squashfs /snap/core22/2133
+loop8                                  74M loop squashfs /snap/core22/2292
+loop9                                47.6M loop squashfs /snap/cups/1142
+loop10                               48.8M loop squashfs /snap/cups/1146
+loop11                              242.3M loop squashfs /snap/discord/297
+loop12                              262.5M loop squashfs /snap/discord/309
+loop13                              248.8M loop squashfs /snap/firefox/7024
+loop14                              251.7M loop squashfs /snap/firefox/7766
+loop15                               16.4M loop squashfs /snap/firmware-updater/216
+loop16                               18.5M loop squashfs /snap/firmware-updater/210
+loop17                                516M loop squashfs /snap/gnome-42-2204/202
+loop18                               91.7M loop squashfs /snap/gtk-common-themes/1535
+loop19                               10.8M loop squashfs /snap/snap-store/1248
+loop20                               10.8M loop squashfs /snap/snap-store/1270
+loop21                               50.9M loop squashfs /snap/snapd/25577
+loop22                               48.1M loop squashfs /snap/snapd/25935
+loop23                                576K loop squashfs /snap/snapd-desktop-integration/315
+loop24                                576K loop squashfs /snap/snapd-desktop-integration/343
+nvme0n1     MTFDHBA1T0QFD-1AX1AABHA 953.9G disk          
+├─nvme0n1p1                           260M part vfat     /boot/efi
+├─nvme0n1p2                            16M part          
+├─nvme0n1p3                         833.6G part ntfs     
+├─nvme0n1p4                          39.1G part ntfs     /mnt/shared
+└─nvme0n1p5                          80.9G part ext4     /
+
+------------------------------------------------------------
+OPERATING SYSTEM
+------------------------------------------------------------
+
+[OS]
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+[Kernel]
+Linux vedant-bothra 7.0.0-34-generic #34~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 15:38:29 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+[Architecture]
+x86_64
+
+------------------------------------------------------------
+SOFTWARE
+------------------------------------------------------------
+
+[Docker]
+Docker version 29.8.1, build 4a63305
+
+[Docker Compose]
+Docker Compose version v5.5.1
+
+[Python]
+Python 3.12.3
+
+[Sysbench]
+sysbench 1.0.20
+
+------------------------------------------------------------
+DOCKER / POSTGRESQL
+------------------------------------------------------------
+
+[Docker Containers]
+NAMES              IMAGE         STATUS       PORTS
+agentdb-postgres   postgres:16   Up 3 hours   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+
+[PostgreSQL Version]
+PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+
+[PostgreSQL Settings]
+              name               | setting | unit 
+---------------------------------+---------+------
+ effective_cache_size            | 524288  | 8kB
+ maintenance_work_mem            | 65536   | kB
+ max_connections                 | 100     | 
+ max_parallel_workers            | 8       | 
+ max_parallel_workers_per_gather | 2       | 
+ max_worker_processes            | 8       | 
+ random_page_cost                | 4       | 
+ seq_page_cost                   | 1       | 
+ shared_buffers                  | 16384   | 8kB
+ work_mem                        | 4096    | kB
+(10 rows)
+
+
+[PostgreSQL Image]
+postgres:16
+
+[PostgreSQL Container Limits]
+CPU limit: 0 | Memory limit: 0 bytes
+
+------------------------------------------------------------
+END OF FINGERPRINT
+------------------------------------------------------------
