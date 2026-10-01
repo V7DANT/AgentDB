@@ -1,0 +1,120 @@
+============================================================
+AgentDB Machine Environment Fingerprint
+============================================================
+
+Generated:
+2026-10-01T12:44:53+00:00
+
+Machine ID:
+laptop-jcqonrho
+
+------------------------------------------------------------
+HARDWARE
+------------------------------------------------------------
+
+[CPU]
+Architecture:                         x86_64
+CPU(s):                               16
+On-line CPU(s) list:                  0-15
+Model name:                           13th Gen Intel(R) Core(TM) i5-13450HX
+Thread(s) per core:                   2
+Core(s) per socket:                   8
+Socket(s):                            1
+
+[RAM]
+               total        used        free      shared  buff/cache   available
+Mem:            11Gi       1.4Gi       9.1Gi        23Mi       1.4Gi        10Gi
+Swap:          3.0Gi          0B       3.0Gi
+
+[Storage]
+NAME  MODEL          SIZE TYPE FSTYPE  MOUNTPOINTS
+loop0              531.9M loop iso9660 /mnt/wsl/docker-desktop/cli-tools
+loop1                625M loop iso9660 
+sda   Virtual Disk 388.4M disk ext4    
+sdb   Virtual Disk     3G disk swap    [SWAP]
+sdc   Virtual Disk     1T disk ext4    /mnt/wsl/docker-desktop/docker-desktop-user-distro
+sdd   Virtual Disk     1T disk ext4    
+sde   Virtual Disk     1T disk ext4    /mnt/wsl/docker-desktop-bind-mounts/Ubuntu/76bcc84ebc79287d799fa286311e909883b724554cb14d4cc5099ddc28e8ee3e
+                                       /mnt/wsl/docker-desktop-bind-mounts/Ubuntu/011d6c0ee6811d9915946e25ee46e427cc8fc5752e6065838920f5820491667b
+                                       /var/lib/docker
+                                       /mnt/wslg/distro
+                                       /
+
+------------------------------------------------------------
+OPERATING SYSTEM
+------------------------------------------------------------
+
+[OS]
+PRETTY_NAME="Ubuntu 24.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.2 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+[Kernel]
+Linux LAPTOP-JCQONRHO 5.15.167.4-microsoft-standard-WSL2 #1 SMP Tue Nov 5 00:21:55 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+[Architecture]
+x86_64
+
+------------------------------------------------------------
+SOFTWARE
+------------------------------------------------------------
+
+[Docker]
+Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2
+
+[Docker Compose]
+Docker Compose version v2.34.0-desktop.1
+
+[Python]
+Python 3.12.3
+
+[Sysbench]
+sysbench 1.0.20
+
+------------------------------------------------------------
+DOCKER / POSTGRESQL
+------------------------------------------------------------
+
+[Docker Containers]
+NAMES              IMAGE           STATUS          PORTS
+agentdb-postgres   postgres:16     Up 11 seconds   0.0.0.0:5432->5432/tcp
+focused_kalam      raesene/bwapp   Up 4 hours      3306/tcp, 0.0.0.0:8081->80/tcp
+
+[PostgreSQL Version]
+PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+
+[PostgreSQL Settings]
+              name               | setting | unit 
+---------------------------------+---------+------
+ effective_cache_size            | 524288  | 8kB
+ maintenance_work_mem            | 65536   | kB
+ max_connections                 | 100     | 
+ max_parallel_workers            | 8       | 
+ max_parallel_workers_per_gather | 2       | 
+ max_worker_processes            | 8       | 
+ random_page_cost                | 4       | 
+ seq_page_cost                   | 1       | 
+ shared_buffers                  | 16384   | 8kB
+ work_mem                        | 4096    | kB
+(10 rows)
+
+
+[PostgreSQL Image]
+postgres:16
+
+[PostgreSQL Container Limits]
+CPU limit: 0 | Memory limit: 0 bytes
+
+------------------------------------------------------------
+END OF FINGERPRINT
+------------------------------------------------------------

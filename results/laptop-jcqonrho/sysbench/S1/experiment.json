@@ -1,0 +1,106 @@
+{
+  "experiment": "S1",
+  "machine_id": "laptop-jcqonrho",
+  "machine_fingerprint": "machines/laptop-jcqonrho/environment.txt",
+  "generated_at": "2026-10-01T13:05:59.796273+00:00",
+  "git_commit": {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "stdout": "af7902a51e3ab2c129a17e39c2467026d004eff0\n",
+    "stderr": ""
+  },
+  "git_status": {
+    "command": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "returncode": 0,
+    "stdout": "?? machines/laptop-jcqonrho/\n?? results/laptop-jcqonrho/\n",
+    "stderr": ""
+  },
+  "configuration": {
+    "workload": "oltp_read_only",
+    "tables": 4,
+    "table_size": 100000,
+    "threads": 4,
+    "duration_seconds": 60,
+    "runs": 5
+  },
+  "initial_runtime_state": {
+    "host": {
+      "timestamp": "2026-10-01T13:05:59.800255+00:00",
+      "cpu_percent": 0.2,
+      "cpu_count_logical": 16,
+      "cpu_count_physical": 8,
+      "memory_total_bytes": 12392411136,
+      "memory_available_bytes": 10770595840,
+      "memory_used_percent": 13.1,
+      "load_average": [
+        0.34375,
+        1.19287109375,
+        0.7177734375
+      ]
+    },
+    "postgres_container": {
+      "BlockIO": "0B / 0B",
+      "CPUPerc": "0.00%",
+      "Container": "agentdb-postgres",
+      "ID": "5831b1b2f6a5",
+      "MemPerc": "1.24%",
+      "MemUsage": "146.5MiB / 11.54GiB",
+      "Name": "agentdb-postgres",
+      "NetIO": "1.27GB / 20.7GB",
+      "PIDs": "6"
+    },
+    "postgres": {
+      "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+      "settings": {
+        "effective_cache_size": {
+          "setting": "524288",
+          "unit": "8kB"
+        },
+        "maintenance_work_mem": {
+          "setting": "65536",
+          "unit": "kB"
+        },
+        "max_connections": {
+          "setting": "100",
+          "unit": null
+        },
+        "max_parallel_workers": {
+          "setting": "8",
+          "unit": null
+        },
+        "max_parallel_workers_per_gather": {
+          "setting": "2",
+          "unit": null
+        },
+        "max_worker_processes": {
+          "setting": "8",
+          "unit": null
+        },
+        "random_page_cost": {
+          "setting": "4",
+          "unit": null
+        },
+        "seq_page_cost": {
+          "setting": "1",
+          "unit": null
+        },
+        "shared_buffers": {
+          "setting": "16384",
+          "unit": "8kB"
+        },
+        "work_mem": {
+          "setting": "4096",
+          "unit": "kB"
+        }
+      }
+    }
+  }
+}
