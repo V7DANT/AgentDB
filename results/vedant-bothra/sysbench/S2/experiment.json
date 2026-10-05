@@ -1,0 +1,66 @@
+{
+  "experiment": "S2",
+  "name": "Sysbench Concurrency Scaling",
+  "machine_id": "vedant-bothra",
+  "fingerprint_file": "machines/vedant-bothra/environment.txt",
+  "started_at": "2026-10-05T20:01:38.604431+00:00",
+  "objective": "Measure how throughput, latency and resource usage change as concurrency increases under a fixed read-only OLTP workload.",
+  "methodology": {
+    "workload": "oltp_read_only",
+    "tables": 4,
+    "rows_per_table": 100000,
+    "duration_seconds": 60,
+    "concurrency_levels": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "runs_per_level": 3
+  },
+  "git": {
+    "commit": "af7902a51e3ab2c129a17e39c2467026d004eff0",
+    "working_tree_status": "?? run_s2.py\n?? ../../results/vedant-bothra/sysbench/S2/"
+  },
+  "postgresql": {
+    "server_version": "16.15 (Debian 16.15-1.pgdg13+2)",
+    "shared_buffers": "128MB",
+    "work_mem": "4MB",
+    "maintenance_work_mem": "64MB",
+    "effective_cache_size": "4GB",
+    "max_connections": "100",
+    "max_worker_processes": "8",
+    "max_parallel_workers": "8",
+    "max_parallel_workers_per_gather": "2",
+    "random_page_cost": "4",
+    "seq_page_cost": "1"
+  },
+  "initial_runtime_state": {
+    "host": {
+      "timestamp": "2026-10-05T20:01:38.685348+00:00",
+      "cpu_percent": 23.3,
+      "logical_cpus": 8,
+      "physical_cpus": 4,
+      "memory_total_bytes": 16519188480,
+      "memory_available_bytes": 11033743360,
+      "memory_percent": 33.2,
+      "load_average": [
+        1.28662109375,
+        1.6748046875,
+        1.58349609375
+      ]
+    },
+    "postgres_container": {
+      "BlockIO": "39MB / 81.9kB",
+      "CPUPerc": "0.51%",
+      "Container": "agentdb-postgres",
+      "ID": "9928c9543287",
+      "MemPerc": "0.36%",
+      "MemUsage": "56.25MiB / 15.38GiB",
+      "Name": "agentdb-postgres",
+      "NetIO": "8.91kB / 126B",
+      "PIDs": "6"
+    }
+  }
+}

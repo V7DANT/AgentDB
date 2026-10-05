@@ -1,0 +1,310 @@
+{
+  "experiment": "S2",
+  "machine_id": "vedant-bothra",
+  "concurrency": 1,
+  "run_number": 1,
+  "started_at": "2026-10-05T20:02:39.949304+00:00",
+  "duration_wall_clock_seconds": 60.026,
+  "command": [
+    "sysbench",
+    "--db-driver=pgsql",
+    "--pgsql-host=127.0.0.1",
+    "--pgsql-port=5432",
+    "--pgsql-user=postgres",
+    "--pgsql-password=postgres",
+    "--pgsql-db=agentdb",
+    "--tables=4",
+    "--table-size=100000",
+    "--threads=1",
+    "--time=60",
+    "--report-interval=10",
+    "oltp_read_only",
+    "run"
+  ],
+  "exit_code": 0,
+  "metrics": {
+    "tps": 1116.09,
+    "qps": 17857.48,
+    "total_queries": 1071504,
+    "total_transactions": 66969,
+    "errors": 0,
+    "reconnects": 0,
+    "total_time": 60.0017,
+    "latency_min": 0.76,
+    "latency_avg": 0.9,
+    "latency_max": 42.83,
+    "latency_p95": 1.1
+  },
+  "runtime_samples": [
+    {
+      "host": {
+        "timestamp": "2026-10-05T20:01:39.922546+00:00",
+        "cpu_percent": 7.5,
+        "logical_cpus": 8,
+        "physical_cpus": 4,
+        "memory_total_bytes": 16519188480,
+        "memory_available_bytes": 11026903040,
+        "memory_percent": 33.2,
+        "load_average": [
+          1.26318359375,
+          1.66357421875,
+          1.580078125
+        ]
+      },
+      "postgres_container": {
+        "BlockIO": "85.6MB / 81.9kB",
+        "CPUPerc": "61.46%",
+        "Container": "agentdb-postgres",
+        "ID": "9928c9543287",
+        "MemPerc": "0.62%",
+        "MemUsage": "96.9MiB / 15.38GiB",
+        "Name": "agentdb-postgres",
+        "NetIO": "3.88MB / 63MB",
+        "PIDs": "7"
+      }
+    },
+    {
+      "host": {
+        "timestamp": "2026-10-05T20:01:46.923719+00:00",
+        "cpu_percent": 15.5,
+        "logical_cpus": 8,
+        "physical_cpus": 4,
+        "memory_total_bytes": 16519188480,
+        "memory_available_bytes": 12605833216,
+        "memory_percent": 23.7,
+        "load_average": [
+          1.24169921875,
+          1.65234375,
+          1.57666015625
+        ]
+      },
+      "postgres_container": {
+        "BlockIO": "95.6MB / 81.9kB",
+        "CPUPerc": "66.74%",
+        "Container": "agentdb-postgres",
+        "ID": "9928c9543287",
+        "MemPerc": "0.69%",
+        "MemUsage": "108.1MiB / 15.38GiB",
+        "Name": "agentdb-postgres",
+        "NetIO": "20.6MB / 336MB",
+        "PIDs": "7"
+      }
+    },
+    {
+      "host": {
+        "timestamp": "2026-10-05T20:01:53.139934+00:00",
+        "cpu_percent": 15.4,
+        "logical_cpus": 8,
+        "physical_cpus": 4,
+        "memory_total_bytes": 16519188480,
+        "memory_available_bytes": 12598759424,
+        "memory_percent": 23.7,
+        "load_average": [
+          1.22216796875,
+          1.64111328125,
+          1.5732421875
+        ]
+      },
+      "postgres_container": {
+        "BlockIO": "98.5MB / 332kB",
+        "CPUPerc": "68.14%",
+        "Container": "agentdb-postgres",
+        "ID": "9928c9543287",
+        "MemPerc": "0.71%",
+        "MemUsage": "111.5MiB / 15.38GiB",
+        "Name": "agentdb-postgres",
+        "NetIO": "39.9MB / 650MB",
+        "PIDs": "7"
+      }
+    },
+    {
+      "host": {
+        "timestamp": "2026-10-05T20:01:59.358913+00:00",
+        "cpu_percent": 14.0,
+        "logical_cpus": 8,
+        "physical_cpus": 4,
+        "memory_total_bytes": 16519188480,
+        "memory_available_bytes": 12636917760,
+        "memory_percent": 23.5,
+        "load_average": [
+          1.28466796875,
+          1.6474609375,
+          1.57568359375
+        ]
+      },
+      "postgres_container": {
+        "BlockIO": "100MB / 332kB",
+        "CPUPerc": "67.30%",
+        "Container": "agentdb-postgres",
+        "ID": "9928c9543287",
+        "MemPerc": "0.72%",
+        "MemUsage": "113.4MiB / 15.38GiB",
+        "Name": "agentdb-postgres",
+        "NetIO": "59.4MB / 966MB",
+        "PIDs": "7"
+      }
+    },
+    {
+      "host": {
+        "timestamp": "2026-10-05T20:02:05.575910+00:00",
+        "cpu_percent": 14.1,
+        "logical_cpus": 8,
+        "physical_cpus": 4,
+        "memory_total_bytes": 16519188480,
+        "memory_available_bytes": 12681412608,
+        "memory_percent": 23.2,
+        "load_average": [
+          1.24072265625,
+          1.62548828125,
+          1.56884765625
+        ]
+      },
+      "postgres_container": {
+        "BlockIO": "102MB / 496kB",
+        "CPUPerc": "67.30%",
+        "Container": "agentdb-postgres",
+        "ID": "9928c9543287",
+        "MemPerc": "0.73%",
+        "MemUsage": "114.8MiB / 15.38GiB",
+        "Name": "agentdb-postgres",
+        "NetIO": "78.8MB / 1.28GB",
+        "PIDs": "7"
+      }
+    },
+    {
+      "host": {
+        "timestamp": "2026-10-05T20:02:11.792092+00:00",
+        "cpu_percent": 15.3,
+        "logical_cpus": 8,
+        "physical_cpus": 4,
+        "memory_total_bytes": 16519188480,
+        "memory_available_bytes": 12707905536,
+        "memory_percent": 23.1,
+        "load_average": [
+          1.22119140625,
+          1.61474609375,
+          1.5654296875
+        ]
+      },
+      "postgres_container": {
+        "BlockIO": "102MB / 659kB",
+        "CPUPerc": "67.89%",
+        "Container": "agentdb-postgres",
+        "ID": "9928c9543287",
+        "MemPerc": "0.73%",
+        "MemUsage": "115.2MiB / 15.38GiB",
+        "Name": "agentdb-postgres",
+        "NetIO": "98.5MB / 1.6GB",
+        "PIDs": "7"
+      }
+    },
+    {
+      "host": {
+        "timestamp": "2026-10-05T20:02:18.009055+00:00",
+        "cpu_percent": 14.7,
+        "logical_cpus": 8,
+        "physical_cpus": 4,
+        "memory_total_bytes": 16519188480,
+        "memory_available_bytes": 12702990336,
+        "memory_percent": 23.1,
+        "load_average": [
+          1.203125,
+          1.6044921875,
+          1.56201171875
+        ]
+      },
+      "postgres_container": {
+        "BlockIO": "103MB / 659kB",
+        "CPUPerc": "67.52%",
+        "Container": "agentdb-postgres",
+        "ID": "9928c9543287",
+        "MemPerc": "0.74%",
+        "MemUsage": "115.9MiB / 15.38GiB",
+        "Name": "agentdb-postgres",
+        "NetIO": "117MB / 1.91GB",
+        "PIDs": "7"
+      }
+    },
+    {
+      "host": {
+        "timestamp": "2026-10-05T20:02:24.225530+00:00",
+        "cpu_percent": 13.5,
+        "logical_cpus": 8,
+        "physical_cpus": 4,
+        "memory_total_bytes": 16519188480,
+        "memory_available_bytes": 12701171712,
+        "memory_percent": 23.1,
+        "load_average": [
+          1.1865234375,
+          1.59423828125,
+          1.55859375
+        ]
+      },
+      "postgres_container": {
+        "BlockIO": "104MB / 692kB",
+        "CPUPerc": "67.96%",
+        "Container": "agentdb-postgres",
+        "ID": "9928c9543287",
+        "MemPerc": "0.75%",
+        "MemUsage": "117.5MiB / 15.38GiB",
+        "Name": "agentdb-postgres",
+        "NetIO": "136MB / 2.22GB",
+        "PIDs": "7"
+      }
+    },
+    {
+      "host": {
+        "timestamp": "2026-10-05T20:02:30.441946+00:00",
+        "cpu_percent": 14.0,
+        "logical_cpus": 8,
+        "physical_cpus": 4,
+        "memory_total_bytes": 16519188480,
+        "memory_available_bytes": 12720967680,
+        "memory_percent": 23.0,
+        "load_average": [
+          1.2314453125,
+          1.5908203125,
+          1.5576171875
+        ]
+      },
+      "postgres_container": {
+        "BlockIO": "105MB / 692kB",
+        "CPUPerc": "66.58%",
+        "Container": "agentdb-postgres",
+        "ID": "9928c9543287",
+        "MemPerc": "0.75%",
+        "MemUsage": "117.5MiB / 15.38GiB",
+        "Name": "agentdb-postgres",
+        "NetIO": "154MB / 2.51GB",
+        "PIDs": "7"
+      }
+    },
+    {
+      "host": {
+        "timestamp": "2026-10-05T20:02:36.660421+00:00",
+        "cpu_percent": 14.6,
+        "logical_cpus": 8,
+        "physical_cpus": 4,
+        "memory_total_bytes": 16519188480,
+        "memory_available_bytes": 12712603648,
+        "memory_percent": 23.0,
+        "load_average": [
+          1.212890625,
+          1.58056640625,
+          1.55419921875
+        ]
+      },
+      "postgres_container": {
+        "BlockIO": "105MB / 692kB",
+        "CPUPerc": "66.60%",
+        "Container": "agentdb-postgres",
+        "ID": "9928c9543287",
+        "MemPerc": "0.75%",
+        "MemUsage": "118.1MiB / 15.38GiB",
+        "Name": "agentdb-postgres",
+        "NetIO": "170MB / 2.77GB",
+        "PIDs": "7"
+      }
+    }
+  ]
+}
