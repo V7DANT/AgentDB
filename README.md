@@ -339,4 +339,68 @@ Therefore, evaluation focuses on:
 - and whether improvements remain consistent across repeated experiments.
 
 The benchmark workloads provide controlled environments in which the
+
+---
+
+## 8. Frontend Console — what it shows and how to run it
+
+The React console in `frontend/` is a **control and observability layer**. It holds no
+data of its own: every page calls the FastAPI collector in `backend/`, which queries
+the live PostgreSQL instance. With `VITE_AGENTDB_DATA_SOURCE=api` there is no mock
+content — the sidebar footer states the active source and the PostgreSQL version.
+
+### What each page shows
+
+| Page | Backed by | Content |
+| --- | --- | --- |
+| Dashboard | live | KPIs (throughput, latency, cache hit ratio, CPU), throughput/latency charts, top statements, recent agent events |
+| Queries | `pg_stat_statements` | Normalized statements with calls, total/mean time, cache hit ratio, disk reads, severity. **Analyze query** runs a rule-based analysis over the captured plan |
+| Execution Plans | `EXPLAIN (FORMAT JSON)` | Plan trees with planner costs, row estimates and detected bottlenecks |
+| Tables | `pg_stat_user_tables` | Rows, heap and index size, sequential vs index scans, dead tuple ratio |
+| Indexes | `pg_stat_user_indexes` | Scan counts, usage share, size, `UNUSED` flag |
+| Configuration | `pg_settings` | Current values of the parameters the configuration expert reasons about |
+| Recommendations | — | Empty by design: no expert produces proposals yet |
+| Agent Activity | collector event log | Every state transition written by the collector and by your own approvals/rejections |
+| History | — | Optimization records with before/after measurements (empty until experts run) |
+| Benchmarks | `results/` + live runner | Committed sysbench results plus a live workload runner (sysbench / pgbench) |
+
+### Turn it on
+
+```bash
+# 1 - PostgreSQL (started manually; docker-compose.yml sets no restart policy)
+docker compose up -d && docker compose ps
+
+# 2 - Backend API
+cd backend && ../.venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+
+# 3 - Frontend
+cd frontend && npm run dev          # http://127.0.0.1:5173
+```
+
+In VS Code: **Terminal → Run Task → `AgentDB: Start All`** (or the numbered tasks
+`1 · Start PostgreSQL`, `2b · Restart Backend API`, `3 · Frontend`).
+
+Data source is configured in `frontend/.env.local`:
+
+```
+VITE_AGENTDB_DATA_SOURCE=api
+VITE_AGENTDB_API_BASE_URL=/api
+```
+
+Set `VITE_AGENTDB_DATA_SOURCE=mock` to run the console offline against the in-memory
+dataset. When it is `api`, the mock-only "Reset demo" button is hidden.
+
+Check the backend end to end:
+
+```bash
+.venv/bin/python backend/scripts/verify_api.py
+```
+
+### Suggested demo flow
+
+1. **Benchmarks → Run a workload** → `oltp_read_only`, 15 s, 4 threads. Watch the live counters.
+2. **Indexes** — `orders_reference_code_idx` sits at 0 scans while `orders.customer_id` is unindexed.
+3. **Queries** — open a statement, then **Analyze query**.
+4. Click **Reset statistics** before every before/after measurement.
+
 AgentDB optimization loop can be evaluated.

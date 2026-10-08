@@ -328,21 +328,19 @@ performance value.
 Each machine has its own S1 result set.
 
 
-# S2 — Concurrency Scaling
+## S2 — Concurrency Scaling
 
 ### Question
 
-How does PostgreSQL performance change as the number of concurrent clients
-increases?
+How does PostgreSQL performance change as the number of concurrent
+clients increases under a fixed read-only OLTP workload?
 
 ### Method
 
-Run the same workload while varying concurrency.
+Run the same Sysbench `oltp_read_only` workload while varying the
+number of concurrent threads.
 
-The exact levels will be selected according to the canonical machine's
-available CPU resources.
-
-An example experimental sequence is:
+The following concurrency levels are evaluated:
 
     1 thread
     2 threads
@@ -350,31 +348,44 @@ An example experimental sequence is:
     8 threads
     16 threads
 
-The values are experimental conditions, not arbitrary benchmark settings.
-The purpose is to observe the relationship between concurrency and
-performance.
+All other workload conditions remain fixed:
+
+- 4 tables
+- 100,000 rows per table
+- 60 seconds per measured run
+- 3 measured runs per concurrency level
+
+The concurrency levels are experimental conditions used to characterize
+the relationship between concurrency and database performance.
 
 ### Metrics
 
 For each concurrency level:
 
 - TPS
+- QPS
 - average latency
 - P95 latency
-- QPS
+- maximum latency
 - errors
 - CPU utilization
 - memory utilization
+- PostgreSQL container resource utilization
+
+Repeated runs are used to measure run-to-run variability.
 
 ### Expected Analysis
 
-The resulting data will show:
+The resulting data characterizes the relationship between:
 
     concurrency -> throughput
-    concurrency -> latency
+    concurrency -> average latency
     concurrency -> P95 latency
+    concurrency -> resource utilization
 
-This helps characterize the workload state that AgentDB observes.
+The results establish how the database behaves as workload concurrency
+increases and provide workload-state information that can later be
+used by AgentDB during optimization.
 
 ---
 

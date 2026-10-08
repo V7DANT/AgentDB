@@ -1,0 +1,1 @@
+"""AgentDB collector backend package."""
