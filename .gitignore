@@ -6,8 +6,9 @@ __pycache__/
 # Environment
 .env
 
-# VS Code
-.vscode/
+# VS Code — keep shared task definitions, ignore local state
+.vscode/*
+!.vscode/tasks.json
 
 # ML
 *.pt
@@ -17,15 +18,12 @@ __pycache__/
 *.keras
 
 # Data
-data/
-datasets/
+/data/
+/datasets/
 *.csv
 
-# PostgreSQL
-postgres_data/
-
 # Experiment output
-logs/
+/logs/
 
 # OS
 .DS_Store

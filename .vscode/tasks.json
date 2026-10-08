@@ -1,0 +1,54 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "AgentDB: 1 · Start PostgreSQL",
+			"type": "shell",
+			"command": "docker compose up -d && docker compose ps",
+			"problemMatcher": [],
+			"presentation": { "panel": "dedicated", "reveal": "always" }
+		},
+		{
+			"label": "AgentDB: 2 · Backend API",
+			"type": "shell",
+			"command": "cd ${workspaceFolder}/backend && ../.venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload",
+			"isBackground": true,
+			"problemMatcher": [],
+			"presentation": { "panel": "dedicated", "reveal": "always" },
+			"group": "build"
+		},
+		{
+			"label": "AgentDB: 2b · Restart Backend API",
+			"type": "shell",
+			"command": "pkill -f 'uvicorn app.main:app'; sleep 2; cd ${workspaceFolder}/backend && ../.venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload",
+			"isBackground": true,
+			"problemMatcher": [],
+			"presentation": { "panel": "dedicated", "reveal": "always" }
+		},
+		{
+			"label": "AgentDB: 3 · Frontend",
+			"type": "shell",
+			"command": "cd ${workspaceFolder}/frontend && npm run dev",
+			"isBackground": true,
+			"problemMatcher": [],
+			"presentation": { "panel": "dedicated", "reveal": "always" }
+		},
+		{
+			"label": "AgentDB: Start All",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"AgentDB: 1 · Start PostgreSQL",
+				"AgentDB: 2b · Restart Backend API",
+				"AgentDB: 3 · Frontend"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "AgentDB: Verify API",
+			"type": "shell",
+			"command": "${workspaceFolder}/.venv/bin/python ${workspaceFolder}/backend/scripts/verify_api.py",
+			"problemMatcher": [],
+			"presentation": { "panel": "dedicated", "reveal": "always" }
+		}
+	]
+}
